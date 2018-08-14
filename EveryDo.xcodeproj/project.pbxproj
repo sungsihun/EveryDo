@@ -15,6 +15,7 @@
 		06FC94D221230B8F00876B6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC94D121230B8F00876B6A /* main.m */; };
 		06FC94DC21230B8F00876B6A /* EveryDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC94DB21230B8F00876B6A /* EveryDoTests.m */; };
 		06FC94E721230B8F00876B6A /* EveryDoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC94E621230B8F00876B6A /* EveryDoUITests.m */; };
+		06FC95372123297A00876B6A /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC95362123297A00876B6A /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		06FC94E221230B8F00876B6A /* EveryDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EveryDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06FC94E621230B8F00876B6A /* EveryDoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EveryDoUITests.m; sourceTree = "<group>"; };
 		06FC94E821230B8F00876B6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06FC95352123297A00876B6A /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		06FC95362123297A00876B6A /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				06FC94C321230B8E00876B6A /* AppDelegate.m */,
 				06FC94C521230B8E00876B6A /* ViewController.h */,
 				06FC94C621230B8E00876B6A /* ViewController.m */,
+				06FC95352123297A00876B6A /* TableViewCell.h */,
+				06FC95362123297A00876B6A /* TableViewCell.m */,
 				06FC94C821230B8E00876B6A /* Main.storyboard */,
 				06FC94CB21230B8F00876B6A /* Assets.xcassets */,
 				06FC94CD21230B8F00876B6A /* LaunchScreen.storyboard */,
@@ -263,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06FC94C721230B8E00876B6A /* ViewController.m in Sources */,
+				06FC95372123297A00876B6A /* TableViewCell.m in Sources */,
 				06FC94D221230B8F00876B6A /* main.m in Sources */,
 				06FC94C421230B8E00876B6A /* AppDelegate.m in Sources */,
 			);
