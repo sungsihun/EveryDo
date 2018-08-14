@@ -10,9 +10,11 @@
 #import "TableViewCell.h"
 #import "DetailViewController.h"
 #import "ToDo.h"
+#import "NewToDoViewController.h"
 
-@interface ViewController ()
-@property (nonatomic, strong) NSArray<ToDo*> *toDoListArray;
+@interface ViewController () <UITableViewDataSource, AddNewToDoDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray<ToDo*> *toDoListArray;
 @end
 
 @implementation ViewController
@@ -27,7 +29,8 @@
     ToDo *toDoItem5 = [[ToDo alloc] initWithTitle:@"reading" Description:@"reading description" PriorityNumber:1];
     ToDo *toDoItem6 = [[ToDo alloc] initWithTitle:@"questions" Description:@"questions description" PriorityNumber:1];
     
-    self.toDoListArray = @[toDoItem1, toDoItem2, toDoItem3, toDoItem4, toDoItem5, toDoItem6];
+    self.toDoListArray = [@[toDoItem1, toDoItem2, toDoItem3, toDoItem4, toDoItem5, toDoItem6] mutableCopy];
+    
 }
 
 
@@ -69,10 +72,20 @@
         detailViewController.toDoDetail2 = toDoListCell.toDoDescription;
         detailViewController.toDoDetail3 = [NSString stringWithFormat:@"Priority: %ld", toDoListCell.toDoPriority];
     }
+    if ([segue.identifier isEqualToString:@"AddNewToDoSegue"]) {
+        NewToDoViewController *dvc = segue.destinationViewController;
+        dvc.delegate = self;
+    }
 }
 
 
 
+#pragma mark - AddNewToDoDelegate
+
+- (void)didAddNewToDo:(ToDo *)toDo {
+    [self.toDoListArray addObject:toDo];
+    [self.tableView reloadData];
+}
 
 
 @end

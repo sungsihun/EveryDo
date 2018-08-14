@@ -18,6 +18,7 @@
 		06FC95372123297A00876B6A /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC95362123297A00876B6A /* TableViewCell.m */; };
 		06FC953D21233D0D00876B6A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC953C21233D0D00876B6A /* DetailViewController.m */; };
 		06FC95402123420800876B6A /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC953F2123420800876B6A /* ToDo.m */; };
+		06FC9543212357FE00876B6A /* NewToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC9542212357FE00876B6A /* NewToDoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		06FC953C21233D0D00876B6A /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		06FC953E2123420800876B6A /* ToDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
 		06FC953F2123420800876B6A /* ToDo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
+		06FC9541212357FE00876B6A /* NewToDoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewToDoViewController.h; sourceTree = "<group>"; };
+		06FC9542212357FE00876B6A /* NewToDoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewToDoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +121,11 @@
 				06FC953F2123420800876B6A /* ToDo.m */,
 				06FC95352123297A00876B6A /* TableViewCell.h */,
 				06FC95362123297A00876B6A /* TableViewCell.m */,
-				06FC94C821230B8E00876B6A /* Main.storyboard */,
 				06FC953B21233D0D00876B6A /* DetailViewController.h */,
 				06FC953C21233D0D00876B6A /* DetailViewController.m */,
+				06FC9541212357FE00876B6A /* NewToDoViewController.h */,
+				06FC9542212357FE00876B6A /* NewToDoViewController.m */,
+				06FC94C821230B8E00876B6A /* Main.storyboard */,
 				06FC94CB21230B8F00876B6A /* Assets.xcassets */,
 				06FC94CD21230B8F00876B6A /* LaunchScreen.storyboard */,
 				06FC94D021230B8F00876B6A /* Info.plist */,
@@ -279,6 +284,7 @@
 			files = (
 				06FC953D21233D0D00876B6A /* DetailViewController.m in Sources */,
 				06FC94C721230B8E00876B6A /* ViewController.m in Sources */,
+				06FC9543212357FE00876B6A /* NewToDoViewController.m in Sources */,
 				06FC95372123297A00876B6A /* TableViewCell.m in Sources */,
 				06FC94D221230B8F00876B6A /* main.m in Sources */,
 				06FC94C421230B8E00876B6A /* AppDelegate.m in Sources */,
