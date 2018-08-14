@@ -10,7 +10,7 @@
 
 
 @interface TableViewCell ()
-
+@property (weak, nonatomic) IBOutlet UILabel *completeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *toDoListLabel;
 @end
 
@@ -33,8 +33,16 @@
     self.toDoTitle = theObject.toDoTitle;
     self.toDoDescription = theObject.toDoDescription;
     self.toDoPriority = theObject.toDoPriorityNumber;
+    self.toDoCompleted = theObject.toDoCompleted;
     
     self.toDoListLabel.text = self.toDoTitle;
+    if (self.toDoCompleted == NO) {
+        self.completeLabel.textColor = UIColor.redColor;
+        self.completeLabel.text = @"Not Completed";
+    } else {
+        self.completeLabel.textColor = UIColor.greenColor;
+        self.completeLabel.text = @"👍 Completed";
+    }
 }
 
 @end

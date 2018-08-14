@@ -15,6 +15,7 @@
         _toDoTitle = title;
         _toDoDescription = description;
         _toDoPriorityNumber = priorityNumber;
+        _toDoCompleted = NO;
     }
     return self;
 }

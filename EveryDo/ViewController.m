@@ -12,7 +12,7 @@
 #import "ToDo.h"
 #import "NewToDoViewController.h"
 
-@interface ViewController () <UITableViewDataSource, AddNewToDoDelegate>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, AddNewToDoDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray<ToDo*> *toDoListArray;
 @end
@@ -31,6 +31,10 @@
     
     self.toDoListArray = [@[toDoItem1, toDoItem2, toDoItem3, toDoItem4, toDoItem5, toDoItem6] mutableCopy];
     
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(completeToDo)];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.tableView addGestureRecognizer:swipeGesture];
+    
 }
 
 
@@ -40,7 +44,34 @@
 }
 
 
+#pragma mark - UITableViewDelegate
+
+- (UISwipeActionsConfiguration *)tableView:(UITableView *)tableView leadingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIContextualAction *completeAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal title:@"completed" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        
+        // TODO: Complete actions here
+        self.toDoListArray[indexPath.row].toDoCompleted = YES;
+        [tableView reloadData];
+    }];
+    UISwipeActionsConfiguration *completeActionConfiguration = [UISwipeActionsConfiguration configurationWithActions:@[completeAction]];
+    completeActionConfiguration.performsFirstActionWithFullSwipe = YES;
+    return completeActionConfiguration;
+
+}
+
+- (UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIContextualAction *deleteAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal title:@"delete" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        
+        [self.toDoListArray removeObject:self.toDoListArray[indexPath.row]];
+        [tableView reloadData];
+    }];
+    UISwipeActionsConfiguration *deleteActionConfiguration = [UISwipeActionsConfiguration configurationWithActions:@[deleteAction]];
+    return deleteActionConfiguration;
+}
+
+
 #pragma mark - UITableViewDataSource methods
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -87,5 +118,12 @@
     [self.tableView reloadData];
 }
 
+
+#pragma mark - completeToDo
+
+- (void)completeToDo {
+    NSLog(@"test");
+ 
+}
 
 @end

@@ -29,20 +29,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pB-MQ-cgG">
-                                                    <rect key="frame" x="-0.5" y="8" width="375" height="28.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pB-MQ-cgG">
+                                                    <rect key="frame" x="72" y="7" width="50.5" height="29"/>
                                                     <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.15156431479999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1s-fB-eYR">
+                                                    <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="4pB-MQ-cgG" firstAttribute="width" secondItem="Zwr-dT-6fy" secondAttribute="width" id="TD9-F3-acb"/>
-                                                <constraint firstItem="4pB-MQ-cgG" firstAttribute="centerX" secondItem="Zwr-dT-6fy" secondAttribute="centerX" id="X0p-1X-AdL"/>
+                                                <constraint firstItem="4pB-MQ-cgG" firstAttribute="leading" secondItem="t1s-fB-eYR" secondAttribute="trailing" constant="10" id="0nk-6l-dhL"/>
+                                                <constraint firstItem="t1s-fB-eYR" firstAttribute="leading" secondItem="Zwr-dT-6fy" secondAttribute="leading" constant="20" id="ghf-Hi-tfS"/>
                                                 <constraint firstItem="4pB-MQ-cgG" firstAttribute="centerY" secondItem="Zwr-dT-6fy" secondAttribute="centerY" id="hCe-xG-GNq"/>
+                                                <constraint firstItem="t1s-fB-eYR" firstAttribute="centerY" secondItem="Zwr-dT-6fy" secondAttribute="centerY" id="sRp-Km-6SA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="completeLabel" destination="t1s-fB-eYR" id="p49-Fa-4vg"/>
                                             <outlet property="toDoListLabel" destination="4pB-MQ-cgG" id="kXc-QD-ak0"/>
                                             <segue destination="1gc-Pe-O0N" kind="show" identifier="detailViewSegue" id="uzy-ZC-OQG"/>
                                         </connections>
@@ -50,6 +58,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="iEY-14-47D"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oQr-CV-Pe9"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -75,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="34"/>
+            <point key="canvasLocation" x="936.79999999999995" y="33.733133433283363"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="SW1-qx-mO5">

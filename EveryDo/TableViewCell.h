@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *toDoTitle;
 @property (strong, nonatomic) NSString *toDoDescription;
 @property (nonatomic) NSInteger toDoPriority;
+@property (nonatomic) BOOL toDoCompleted;
 
 - (void)configureCell:(ToDo*)theObject;
 
