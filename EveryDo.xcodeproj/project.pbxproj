@@ -16,6 +16,8 @@
 		06FC94DC21230B8F00876B6A /* EveryDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC94DB21230B8F00876B6A /* EveryDoTests.m */; };
 		06FC94E721230B8F00876B6A /* EveryDoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC94E621230B8F00876B6A /* EveryDoUITests.m */; };
 		06FC95372123297A00876B6A /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC95362123297A00876B6A /* TableViewCell.m */; };
+		06FC953D21233D0D00876B6A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC953C21233D0D00876B6A /* DetailViewController.m */; };
+		06FC95402123420800876B6A /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FC953F2123420800876B6A /* ToDo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		06FC94E821230B8F00876B6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06FC95352123297A00876B6A /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		06FC95362123297A00876B6A /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		06FC953B21233D0D00876B6A /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		06FC953C21233D0D00876B6A /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		06FC953E2123420800876B6A /* ToDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
+		06FC953F2123420800876B6A /* ToDo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +114,13 @@
 				06FC94C321230B8E00876B6A /* AppDelegate.m */,
 				06FC94C521230B8E00876B6A /* ViewController.h */,
 				06FC94C621230B8E00876B6A /* ViewController.m */,
+				06FC953E2123420800876B6A /* ToDo.h */,
+				06FC953F2123420800876B6A /* ToDo.m */,
 				06FC95352123297A00876B6A /* TableViewCell.h */,
 				06FC95362123297A00876B6A /* TableViewCell.m */,
 				06FC94C821230B8E00876B6A /* Main.storyboard */,
+				06FC953B21233D0D00876B6A /* DetailViewController.h */,
+				06FC953C21233D0D00876B6A /* DetailViewController.m */,
 				06FC94CB21230B8F00876B6A /* Assets.xcassets */,
 				06FC94CD21230B8F00876B6A /* LaunchScreen.storyboard */,
 				06FC94D021230B8F00876B6A /* Info.plist */,
@@ -267,10 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06FC953D21233D0D00876B6A /* DetailViewController.m in Sources */,
 				06FC94C721230B8E00876B6A /* ViewController.m in Sources */,
 				06FC95372123297A00876B6A /* TableViewCell.m in Sources */,
 				06FC94D221230B8F00876B6A /* main.m in Sources */,
 				06FC94C421230B8E00876B6A /* AppDelegate.m in Sources */,
+				06FC95402123420800876B6A /* ToDo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

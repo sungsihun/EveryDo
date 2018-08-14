@@ -8,6 +8,7 @@
 
 #import "TableViewCell.h"
 
+
 @interface TableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *toDoListLabel;
@@ -27,10 +28,13 @@
     // Configure the view for the selected state
 }
 
-- (void)configureCell:(id)theObject {
+- (void)configureCell:(ToDo*)theObject {
     _dataObject = theObject;
-    NSString *dataObject = theObject;
-    self.toDoListLabel.text = dataObject;
+    self.toDoTitle = theObject.toDoTitle;
+    self.toDoDescription = theObject.toDoDescription;
+    self.toDoPriority = theObject.toDoPriorityNumber;
+    
+    self.toDoListLabel.text = self.toDoTitle;
 }
 
 @end
